@@ -1,6 +1,5 @@
 import userData from '../fixtures/userData.json'
 
-
 describe('Orange HRM Tests', () => { //.skip - travar sua pesquisa.
 
   const selectorsList = {
@@ -10,10 +9,7 @@ describe('Orange HRM Tests', () => { //.skip - travar sua pesquisa.
     sectionTitleTopBar: '.oxd-topbar-header-breadcrumb-module',
     dashboarGrid: ".orangehrm-dashboard-grid",
     wrongCredentilAlert: "[role='alert']"
-
   }
-
- 
 
   it('Login - Success', () => { //teste
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')

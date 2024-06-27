@@ -12,7 +12,7 @@ describe('Orange HRM Tests', () => { //.skip - travar sua pesquisa.
   }
 
   it('Login - Success', () => { //teste
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('auth/login')
     cy.get(selectorsList.usernameField).type(userData.userSuccess.username) //('ADMIN')//usuário/seletores/comando
     cy.get(selectorsList.passwordField).type(userData.userSuccess.password)//('admin123') //senha/seletores/comando
     cy.get(selectorsList.loginButoon).click() //botao - entrer
@@ -20,7 +20,7 @@ describe('Orange HRM Tests', () => { //.skip - travar sua pesquisa.
     cy.get(selectorsList.dashboarGrid) //.contains("Dashboard") // get- checar se existe
   })
   it('Login - Fail', () => { 
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('auth/login')
     cy.get(selectorsList.usernameField).type(userData.userfail.username)//('test')//ADMIN
     cy.get(selectorsList.passwordField).type(userData.userfail.password)//('ateste3') //dmin123
     cy.get(selectorsList.loginButoon).click() 
